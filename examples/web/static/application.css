@@ -3,8 +3,135 @@
 body {
    background-color: #FAFAFA;
    font-family: 'Droid Sans', sans-serif;
+   padding: 20px;
 }
 
-table {
-   width: 100%;
+.CurrentSkyProgram,
+.CurrentSkyChannel {
+   width: 960px;
+   margin: 0px auto;
+   overflow: hidden;
+}
+
+.CurrentSkyProgram img {
+   float: left;
+   margin-right: 10px;
+   width: 472px;
+   height: 265px;
+   margin-top: 10px;
+}
+
+.CurrentSkyProgram .title {
+   font-size: 2em;
+   font-weight: bold;
+   margin-bottom: 0.5em;
+}
+
+.CurrentSkyProgram .time,
+.CurrentSkyProgram .season-episode {
+   margin-bottom: 0.5em;
+   color: #999;
+}
+
+.CurrentSkyChannel {
+   overflow: hidden;
+   border-bottom: 1px solid #E5E5E5;
+   padding-bottom: 5px;
+}
+
+.CurrentSkyChannel .name,
+.CurrentSkyChannel .channel {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #999;
+   margin: 5px;
+}
+
+.CurrentSkyChannel .channel {
+   color: #CCC;
+}
+
+/* ===== */
+
+@-webkit-keyframes spin {
+   from { -webkit-transform: rotate(0deg); }
+   to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin-reverse {
+   from { -webkit-transform: rotate(360deg); }
+   to { -webkit-transform: rotate(0deg); }
+}
+
+.SkyController,
+.spinner_container {
+   width: 28px;
+   height: 28px;
+}
+
+.spinner_container {
+   position: absolute;
+}
+
+.spinner_container .spinner_masked_circle {
+   width: 20px;
+   height: 20px;
+   border-radius: 12px;
+   border: 3px solid #AAA;
+}
+
+.spinner_container .spinner_mask {
+   width: 12px;
+   height: 12px;
+   overflow: hidden;
+}
+
+.spinner_container .spinner {
+   position: absolute;
+   left: 1px;
+   top: 1px;
+   width: 26px;
+   height: 26px;
+   -webkit-animation: spin 4s infinite linear;
+}
+
+.spinner_container .speed {
+   text-align: center;
+   font-size: 11px;
+   color: #999;
+   line-height: 28px;
+   font-weight: bold;
+   position: relative;
+   top: 1px;
+}
+
+.spinner_container.speed_0 .spinner {
+   -webkit-animation: none;
+}
+
+.spinner_container.speed_2 .spinner {
+   -webkit-animation: spin 2s infinite linear;
+}
+.spinner_container.speed_2.rwd .spinner {
+   -webkit-animation: spin-reverse 2s infinite linear;
+}
+
+.spinner_container.speed_6 .spinner {
+   -webkit-animation: spin 1s infinite linear;
+}
+.spinner_container.speed_6.rwd .spinner {
+   -webkit-animation: spin-reverse 1s infinite linear;
+}
+
+.spinner_container.speed_12 .spinner {
+   -webkit-animation: spin 0.5s infinite linear;
+}
+.spinner_container.speed_12.rwd .spinner {
+   -webkit-animation: spin-reverse 0.5s infinite linear;
+}
+
+.spinner_container.speed_30 .spinner {
+   -webkit-animation: spin 0.25s infinite linear;
+}
+.spinner_container.speed_30.rwd .spinner {
+   -webkit-animation: spin-reverse 0.25s infinite linear;
 }

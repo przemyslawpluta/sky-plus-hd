@@ -6,14 +6,53 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
       <script src="/application.js"></script>
 
    </head>
    <body>
 
-      <table>
-         <tbody class='changes'></tbody>
-      </table>
+      <div id='SkyContainer'></div>
+
+      <script type='template' id='template_CurrentSkyChannel'>
+         <div class='name pull-left'><%= name %></div>
+         <div class='channel pull-left'><%= channel %></div>
+         <div class='controller pull-right'></div>
+      </script>
+
+      <script type='template' id='template_CurrentSkyProgram'>
+         <img class='img-polaroid' src='<%= (image)?image:"http://placehold.it/472x265/e8117f/FFFFFF&text=No+preview+image+for+this+program" %>'>
+         <h1><%= title %></h1>
+         <div class='time'><%= new moment(start).format('HH:mm') %> - <%= new moment(end).add('s',1).format('HH:mm') %></div>
+         <% if(details.episode || details.season) { %>
+            <div class='season-episode'>
+               <% if(details.season) { %>Season <%= details.season %><% } %>
+               <% if(details.episode) { %>Episode <%= details.episode %><% } %>
+            </div>
+         <% } %>
+         <p class='description'><%= description %></p>
+         <% if(details.genres && details.genres.length) { %>
+            <ul class='genres'>
+               <% _.each(details.genres,function(genre){ %>
+                  <li class='label'><%= genre %></li>
+               <% }) %>
+            </ul>
+         <% } %>
+      </script>
+
+      <script type='template' id='template_SkyController'>
+         <div class='spinner_container <%= state %> speed_<%= Math.abs(speed) %>'>
+            <% if (Math.abs(speed)>1) { %>
+               <div class='speed'><%= Math.abs(speed) %></div>
+            <% } %>
+            <div class='spinner'>
+               <div class='spinner_mask'>
+                  <div class='spinner_masked_circle'></div>
+               </div>
+            </div>
+         </div>
+      </script>
 
    </body>
 </html>
