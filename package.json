@@ -6,7 +6,7 @@
   "dependencies": {
     "celeri": "~0.3.3",
     "ip": "~0.3.0",
-    "node-ssdp": "~0.2.0",
+    "node-ssdp": "^2.0.1",
     "q": "~1.0.0",
     "request": "~2.36.0",
     "underscore": "~1.6.0",
