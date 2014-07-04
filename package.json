@@ -6,11 +6,10 @@
   "dependencies": {
     "celeri": "~0.3.3",
     "ip": "~0.3.0",
-    "node-ssdp": "^2.0.1",
+    "node-ssdp": "~2.0.1",
     "q": "~1.0.0",
     "request": "~2.36.0",
     "underscore": "~1.6.0",
-    "underscore.string": "~2.3.3",
     "xml": "0.0.12",
     "xml2js": "~0.4.1"
   },
