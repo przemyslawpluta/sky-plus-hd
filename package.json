@@ -1,8 +1,8 @@
 {
-  "name": "sky-plus-hd",
+  "name": "skyplus-hd",
   "version": "0.1.0",
-  "description": "Node.js module for controlling and monitoring Sky+ HD set top boxes",
-  "main": "lib/sky-plus-hd.js",
+  "description": "Control and monitor Sky+ HD set top boxes",
+  "main": "lib/skyplus-hd.js",
   "dependencies": {
     "celeri": "~0.3.3",
     "ip": "~0.3.0",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dalhundal/sky-plus-hd.git"
+    "url": "https://github.com/przemyslawpluta/skyplus-hd"
   },
   "keywords": [
     "SkyHD",
