@@ -10,7 +10,7 @@ skyFinder.then(function find(skyBox) {
 
    skyBox.on('ready', function ready() {
       console.log('Ready ...');
-      celeri.open({ prefix: 'sky-plus-hd > '});
+      celeri.open({ prefix: 'skyplus-hd > '});
    });
 
    celeri.option({
