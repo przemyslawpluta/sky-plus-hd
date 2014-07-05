@@ -59,7 +59,7 @@ skyFinder.then(function find(skyBox) {
       command: 'fwd',
       description: 'Fwd the currently playing programme',
    }, function resolve() {
-      var spinner = celeri.loading('Playing');
+      var spinner = celeri.loading('Forwarding');
 
       skyBox.fwd().then(function fwd() {
          spinner.done();
@@ -73,7 +73,7 @@ skyFinder.then(function find(skyBox) {
       command: 'rew',
       description: 'Rew the currently playing programme',
    }, function resolve() {
-      var spinner = celeri.loading('Playing');
+      var spinner = celeri.loading('Rewinding');
 
       skyBox.rew().then(function rew() {
          spinner.done();
@@ -87,7 +87,7 @@ skyFinder.then(function find(skyBox) {
       command: 'up',
       description: 'Channel up from currently playing programme',
    }, function resolve() {
-      var spinner = celeri.loading('Playing');
+      var spinner = celeri.loading('Channel Up');
 
       skyBox.channelUp().then(function channelUp() {
          spinner.done();
@@ -101,7 +101,7 @@ skyFinder.then(function find(skyBox) {
       command: 'down',
       description: 'Channel down from currently playing programme',
    }, function resolve() {
-      var spinner = celeri.loading('Playing');
+      var spinner = celeri.loading('Channel Down');
 
       skyBox.channelDown().then(function channelDown() {
          spinner.done();
