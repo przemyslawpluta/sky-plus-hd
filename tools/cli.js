@@ -1,5 +1,5 @@
 var celeri = require('celeri'),
-   SkyPlusHD = require('../..'),
+   SkyPlusHD = require('../'),
    skyFinder = new SkyPlusHD().find();
 
 skyFinder.then(function find(skyBox) {

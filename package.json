@@ -10,13 +10,13 @@
     "q": "~1.0.0",
     "request": "~2.36.0",
     "underscore": "~1.6.0",
-    "xml": "0.0.12",
+    "xml": "~0.0.12",
     "xml2js": "~0.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node tools/monitor/sky-plus-hd-monitor.js",
-    "cli": "node tools/cli/sky-plus-hd-cli.js"
+    "start": "node tools/monitor.js",
+    "ctrl": "node tools/cli.js"
   },
   "repository": {
     "type": "git",
