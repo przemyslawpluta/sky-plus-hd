@@ -15,8 +15,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node tools/monitor.js",
-    "ctrl": "node tools/cli.js"
+    "start": "node ./tools/monitor.js",
+    "cli": "node ./tools/cli.js"
   },
   "repository": {
     "type": "git",
